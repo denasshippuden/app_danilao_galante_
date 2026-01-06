@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c9a03f">
+  <title>Chopp Galante - Pedidos</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="splashing">
+  <div id="splash" class="splash" aria-hidden="true">
+    <div class="splash-logo">
+      <img src="icons/logo_chope.png" alt="Chopp Galante">
+    </div>
+  </div>
+  <div class="page">
+    <button id="cart-button" class="cart-fab" type="button" aria-label="Abrir carrinho">
+      <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM6.2 6h12.9c.7 0 1.2.7.9 1.4l-2.2 5a2 2 0 0 1-1.8 1.2H9.1a2 2 0 0 1-1.9-1.5L4.9 3.5H2v-2h3.3c.5 0 .9.3 1 .8L6.2 6z"/>
+      </svg>
+      <span id="cart-count" class="cart-count" aria-hidden="true"></span>
+    </button>
+
+    <main>
+      <section id="como-funciona" class="tab-content active about-chaos">
+        <div class="section-header chaos-header">
+          <div class="chaos-copy">
+            <p class="eyebrow">Quem somos</p>
+            <h2>Chope Galante desde 2009</h2>
+            <p class="lead">Trabalhamos com chope desde 2009, com barris de 10L, 15L, 20L, 30L e 50L. Atendimento para delivery ou retirada.</p>
+          </div>
+          <div class="chaos-stickers">
+            <span class="sticker">Leva e traz</span>
+            <span class="sticker">Barris 10L a 50L</span>
+            <span class="sticker">Delivery e retirada</span>
+            <span class="sticker">Maquina eletrica 50L+</span>
+          </div>
+        </div>
+
+        <div class="how-grid">
+          <div class="card how-card">
+            <p class="eyebrow">Barris</p>
+            <h3>Tamanhos disponiveis</h3>
+            <p class="catalog-text">Escolha o tamanho ideal para o evento. Trabalhamos com barris de 10L a 50L.</p>
+            <div class="chips">
+              <span class="chip">10L</span>
+              <span class="chip">15L</span>
+              <span class="chip">20L</span>
+              <span class="chip">30L</span>
+              <span class="chip">50L</span>
+            </div>
+            <div class="media-placeholder">Foto: barris e montagem</div>
+          </div>
+          <div class="card how-card">
+            <p class="eyebrow">Equipamentos</p>
+            <h3>Chopeira eletrica e caixa termica</h3>
+            <p class="catalog-text">Possuimos chopeira eletrica e caixa termica. A maquina de chope so e disponibilizada acima de 50 litros.</p>
+            <div class="media-placeholder">Foto: chopeira eletrica</div>
+            <div class="media-placeholder">Foto: caixa termica</div>
+          </div>
+          <div class="card how-card">
+            <p class="eyebrow">Leva e traz</p>
+            <h3>Entrega e retirada combinadas</h3>
+            <p class="catalog-text">Trabalhamos com leva e traz, combinando horario e local para entregar e retirar os barris.</p>
+            <div class="media-placeholder">Foto: entrega e retirada</div>
+          </div>
+        </div>
+
+        <div class="how-actions">
+          <button class="btn primary" data-tab="catalogo">Ver catalogo</button>
+        </div>
+      </section>
+      <section id="catalogo" class="tab-content">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Catalogo</p>
+            <h2>Principais chopes</h2>
+            <p class="lead">Chope sempre fresco para delivery ou retirada. Veja os estilos mais pedidos.</p>
+          </div>
+          <div class="badge">Barris de 10L a 50L</div>
+        </div>
+
+        <div id="catalog-grid" class="catalog-grid"></div>
+      </section>
+      <section id="pedido" class="tab-content">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Monte o pedido</p>
+            <h2>Escolha o chopp por barril</h2>
+          </div>
+          <div class="badge">Máquina elétrica acima de 100L</div>
+        </div>
+
+        <div id="products" class="cards-grid"></div>
+      </section>
+      <section id="checkout" class="tab-content">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Dados do pedido</p>
+            <h2>Entrega e pagamento</h2>
+          </div>
+          <div class="badge">Etapa final</div>
+        </div>
+
+        
+<div class="card form checkout">
+          <div class="checkout-header">
+            <p class="eyebrow">Dados do pedido</p>
+            <h3>Entrega e pagamento</h3>
+            <p class="meta">Finalize o pedido com entrega e pagamento no estilo Mercado Livre.</p>
+          </div>
+          <form id="order-form">
+            <div class="checkout-grid">
+              <div class="checkout-card">
+                <div class="checkout-title">
+                  <span class="step-tag">1</span>
+                  <div>
+                    <h4>Entrega ou retirada</h4>
+                    <p class="meta">Escolha como receber e informe os dados.</p>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label>
+                    Nome do cliente
+                    <input name="nome" placeholder="Cliente" required>
+                  </label>
+                  <label>
+                    Telefone/WhatsApp
+                    <input name="telefone" placeholder="(19) 99999-9999" required>
+                  </label>
+                </div>
+                <div class="option-list">
+                  <label class="option-card">
+                    <input type="radio" name="tipo" value="delivery" checked required>
+                    <div class="option-content">
+                      <span class="option-title">Delivery</span>
+                      <span class="option-meta">Entregamos no endereco informado.</span>
+                    </div>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="tipo" value="retirada">
+                    <div class="option-content">
+                      <span class="option-title">Retirada</span>
+                      <span class="option-meta">Retire com hora marcada.</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label>
+                    Endereco (se delivery)
+                    <input name="endereco" placeholder="Rua, numero, bairro">
+                  </label>
+                  <label>
+                    Data/Horario
+                    <input name="quando" type="datetime-local" required>
+                  </label>
+                </div>
+              </div>
+              <div class="checkout-card">
+                <div class="checkout-title">
+                  <span class="step-tag">2</span>
+                  <div>
+                    <h4>Pagamento</h4>
+                    <p class="meta">Escolha a forma preferida.</p>
+                  </div>
+                </div>
+                <div class="option-list">
+                  <label class="option-card">
+                    <input type="radio" name="pagamento" value="entrega" checked required>
+                    <div class="option-content">
+                      <span class="option-title">Pagar na entrega/retirada</span>
+                      <span class="option-meta">Dinheiro ou cartao no local.</span>
+                    </div>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="pagamento" value="pix">
+                    <div class="option-content">
+                      <span class="option-title">PIX</span>
+                      <span class="option-meta">Enviar comprovante.</span>
+                    </div>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="pagamento" value="cartao">
+                    <div class="option-content">
+                      <span class="option-title">Cartao</span>
+                      <span class="option-meta">Credito ou debito.</span>
+                    </div>
+                  </label>
+                </div>
+                <label>
+                  Observacoes
+                  <input name="obs" placeholder="Ex: barril 20L, gelo, copos">
+                </label>
+              </div>
+            </div>
+            <div class="actions">
+              <button type="submit" class="btn primary">Registrar pedido</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="painel" class="tab-content">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Operação</p>
+            <h2>Painel interno</h2>
+          </div>
+          <div class="filters">
+            <label>Status
+              <select id="filter-status">
+                <option value="todos">Todos</option>
+                <option value="pendente">Pendente</option>
+                <option value="preparando">Preparando</option>
+                <option value="pronto">Pronto</option>
+              </select>
+            </label>
+            <label>Data
+              <input type="date" id="filter-date">
+            </label>
+          </div>
+        </div>
+
+        <div class="panel-grid">
+          <div class="card">
+            <p class="eyebrow">Estoque manual</p>
+            <h3>Litros disponíveis</h3>
+            <div id="stock-list" class="stock-list"></div>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">Fila de pedidos</p>
+            <h3>Pedidos registrados</h3>
+            <div id="orders-list" class="orders-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="cart-drawer" class="cart-drawer hidden" aria-hidden="true">
+      <div class="cart-backdrop" data-cart-close></div>
+      <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div class="cart-panel-header">
+          <div>
+            <p class="eyebrow">Resumo</p>
+            <h3 id="cart-title">Seu carrinho</h3>
+          </div>
+          <button id="close-cart" class="btn ghost small" type="button">Fechar</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cart-total">R$ 0,00</strong>
+        </div>
+        <div class="cart-panel-actions">
+          <button id="clear-cart" class="btn ghost small" type="button">Limpar</button>
+          <button id="cart-continue" class="btn primary" type="button">Confirmar itens</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="admin-lock" class="modal hidden">
+    <div class="modal-content">
+      <h3>Acesso restrito</h3>
+      <p>Entre com a senha de administrador para abrir o painel.</p>
+      <form id="admin-login">
+        <label>Senha
+          <input type="password" name="senha" required placeholder="Senha do admin">
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn primary">Entrar</button>
+          <button type="button" class="btn ghost" id="close-lock">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
