@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chopp-galante-v4';
+const CACHE_NAME = 'chopp-galante-v5';
 const ASSETS = [
   './',
   './index.html',

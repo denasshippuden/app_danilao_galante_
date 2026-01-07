@@ -305,7 +305,6 @@ function renderCart() {
     const product = productList.find((p) => p.id === line.id);
     const litros = line.size * line.barrels;
     const lineTotal = product.preco * litros;
-    const litrosLabel = line.barrels > 1 ? ` | ${litros} L` : '';
     const barrilLabel = line.barrels === 1 ? 'Barril' : 'Barris';
     total += lineTotal;
     const row = document.createElement('div');
@@ -313,7 +312,7 @@ function renderCart() {
     row.innerHTML = `
       <div>
         <strong>${product.nome}</strong>
-        <div class="meta">${line.barrels} ${barrilLabel} de ${line.size} L${litrosLabel} | ${currency.format(product.preco)} / L</div>
+        <div class="meta">${line.barrels} ${barrilLabel} de ${line.size} L | ${currency.format(product.preco)} / L</div>
       </div>
       <div>
         <div>${currency.format(lineTotal)}</div>
