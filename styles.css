@@ -534,7 +534,7 @@ h2, h3 {
   border-radius: 12px;
   background: rgba(255,255,255,0.03);
 }
-.cart-line .meta { color: var(--muted); font-size: 12px; }
+.cart-line .meta { color: rgba(224,185,87,0.85); font-size: 12px; }
 .cart-total {
   display: flex;
   justify-content: space-between;
