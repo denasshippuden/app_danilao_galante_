@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="splashing">
   <div id="splash" class="splash" aria-hidden="true">
@@ -26,52 +27,60 @@
     </button>
 
     <main>
-      <section id="como-funciona" class="tab-content active about-chaos">
-        <div class="section-header chaos-header">
-          <div class="chaos-copy">
-            <p class="eyebrow">Quem somos</p>
-            <h2>Chope Galante desde 2009</h2>
-            <p class="lead">Trabalhamos com chope desde 2009, com barris de 10L, 15L, 20L, 30L e 50L. Atendimento para delivery ou retirada.</p>
-          </div>
-          <div class="chaos-stickers">
-            <span class="sticker">Leva e traz</span>
-            <span class="sticker">Barris 10L a 50L</span>
-            <span class="sticker">Delivery e retirada</span>
-            <span class="sticker">Maquina eletrica 50L+</span>
-          </div>
-        </div>
-
-        <div class="how-grid">
-          <div class="card how-card">
-            <p class="eyebrow">Barris</p>
-            <h3>Tamanhos disponiveis</h3>
-            <p class="catalog-text">Escolha o tamanho ideal para o evento. Trabalhamos com barris de 10L a 50L.</p>
-            <div class="chips">
-              <span class="chip">10L</span>
-              <span class="chip">15L</span>
-              <span class="chip">20L</span>
-              <span class="chip">30L</span>
-              <span class="chip">50L</span>
+      <section id="como-funciona" class="tab-content active chill-home">
+        <div class="chill-hero">
+          <div class="chill-title">
+            <h1><span>Histórias e curiosidades sobre o chope (pra contar e render conversa)</span></h1>
+            <div class="chill-actions">
+              <button class="btn primary" data-tab="catalogo">Bora escolher o chope</button>
             </div>
-            <img class="media-photo" src="images/barris-montagem.jpg" alt="Barris e montagem" loading="lazy">
           </div>
-          <div class="card how-card">
-            <p class="eyebrow">Equipamentos</p>
-            <h3>Chopeira eletrica e caixa termica</h3>
-            <p class="catalog-text">Possuimos chopeira eletrica e caixa termica. A maquina de chope so e disponibilizada acima de 50 litros.</p>
-            <div class="media-placeholder">Foto: chopeira eletrica</div>
-            <div class="media-placeholder">Foto: caixa termica</div>
-          </div>
-          <div class="card how-card">
-            <p class="eyebrow">Leva e traz</p>
-            <h3>Entrega e retirada combinadas</h3>
-            <p class="catalog-text">Trabalhamos com leva e traz, combinando horario e local para entregar e retirar os barris.</p>
-            <div class="media-placeholder">Foto: entrega e retirada</div>
-          </div>
+          <aside class="chill-questions">
+            <h2>Perguntas que abrem conversa (sem travar ninguém):</h2>
+            <ul class="question-list">
+              <li>“Você é time colarinho alto ou baixo? Por quê?”</li>
+              <li>“Qual foi o melhor chope que você já tomou e onde foi?”</li>
+              <li>“Chope com qual petisco é casamento perfeito pra você?”</li>
+              <li>“Qual foi o chope que você tomou e pensou: ‘isso aqui tá perigoso de bom’?”</li>
+              <li>“Se sua semana fosse um chope: mais leve, mais forte, mais amargo ou mais doce?”</li>
+              <li>“Qual combo você escolhe: barzinho raiz, pub, casa com amigos ou boteco de esquina?”</li>
+            </ul>
+          </aside>
         </div>
 
-        <div class="how-actions">
-          <button class="btn primary" data-tab="catalogo">Ver catalogo</button>
+        <div class="chill-curiosities">
+          <article class="chill-card" style="--delay: 0.05s;">
+            <h3>“Chope” começou como medida, não como bebida</h3>
+            <p>A palavra vem de Schoppen (alemão), que era uma unidade/caneca — e só depois virou “o conteúdo do copo” no jeito brasileiro de pedir.</p>
+          </article>
+          <article class="chill-card" style="--delay: 0.1s;">
+            <h3>“Chopp” vs “chope”: a polêmica divertida</h3>
+            <p>No uso do dia a dia, todo mundo entende. Mas na norma culta, a forma mais “certinha” costuma ser “chope” (e “chopp” aparece muito por uso comercial).</p>
+          </article>
+          <article class="chill-card" style="--delay: 0.15s;">
+            <h3>A diferença que mais separa chope de cerveja é a pasteurização</h3>
+            <p>Em geral, o chope é associado à não pasteurização, o que dá mais sensação de frescor — e também pede consumo mais rápido.</p>
+          </article>
+          <article class="chill-card" style="--delay: 0.2s;">
+            <h3>“Chope brasileiro” não é um estilo oficial — é um jeito de servir e viver</h3>
+            <p>Ele virou “cultura”: copo, ritual, encontro em bar, tradição urbana. Não é exatamente uma “receita”, é um modo brasileiro de consumo que se consolidou com o tempo.</p>
+          </article>
+          <article class="chill-card" style="--delay: 0.25s;">
+            <h3>O “colarinho” é parte do show (e tem regra clássica)</h3>
+            <p>Muita gente chama de espuma, mas os bons tiradores defendem que é creme: protege aroma, ajuda a segurar gás e dá experiência. A tradição popular fala em 2 dedos (algo perto de 2,5–3 cm).</p>
+          </article>
+          <article class="chill-card" style="--delay: 0.3s;">
+            <h3>O ritual do copo inclinado (parece simples, mas muda tudo)</h3>
+            <p>Inclinar o copo e ir endireitando ajuda a controlar a formação do colarinho e a carbonatação — por isso em bar bom o chope “nasce bonito”.</p>
+          </article>
+          <article class="chill-card" style="--delay: 0.35s;">
+            <h3>Curiosidade internacional</h3>
+            <p>Em Portugal, o “chope” (no sentido brasileiro) costuma ser chamado de fino ou imperial — então dá pra brincar: “pede um fino e vê quem entende”.</p>
+          </article>
+          <article class="chill-card" style="--delay: 0.4s;">
+            <h3>Mito que rende debate saudável: copo congelado</h3>
+            <p>Tem gente que ama, tem gente que odeia. O gancho bom é: “copo muito congelado pode matar o colarinho… mas no calor do Brasil, muita gente prefere assim”. (Ótimo tema pra roda dividir “time A” vs “time B”.)</p>
+          </article>
         </div>
       </section>
       <section id="catalogo" class="tab-content">
